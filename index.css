@@ -49,3 +49,8 @@
 .res-logoFood{
     width: 100%;
 }
+
+.filter-btn{
+    margin : 10px;
+    cursor : pointer;
+}
