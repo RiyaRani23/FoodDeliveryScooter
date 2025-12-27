@@ -1,10 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import {useState, useEffect } from "react";
-import resList from "../utils/mockData";
+import Shimmer from "./Shimmer";
 
 const Body =() => {
     // local state variable - super powerful
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+    const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
     useEffect (() => {
         fetchData();
@@ -12,12 +12,19 @@ const Body =() => {
 
     const fetchData = async () => {
         const data = await fetch(
-            "https://www.swiggy.com/dapi/restaurants/search/v3?lat=12.9352403&lng=77.624532&str=The%20Potbelly&trackingId=ac5f3de9-7344-d719-8753-97ef45e10a29&submitAction=ENTER&queryUniqueId=00171c40-5f1c-7af9-01fe-0a7be9fa3fdf"
+            "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.3492917&lng=85.33476499999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
 
         const json = await data.json();
-        console.log(json);
+        //Optional Chaining
+        setListOfRestaurants(
+            json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        );
     };
+
+    if (listOfRestaurants.length === 0) {
+        return <Shimmer />;
+    }
 
     return (
     <div className="body">
@@ -26,7 +33,7 @@ const Body =() => {
      className="filter-btn"
       onClick={() => {
        const filteredList = listOfRestaurants.filter(
-        (res) => res.card.card.info.avgRating > 4.5
+        (res) => res.info.avgRating > 4.3
        );
        setListOfRestaurants(filteredList);
       }}
@@ -35,11 +42,11 @@ const Body =() => {
     </button>
     </div>
      <div className="res-container">
-       { listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.card.card.info.id} 
-           resData={restaurant}
+        {listOfRestaurants.map((restaurant) => (
+        <RestaurantCard key={restaurant.info.id} resData={restaurant}
   />
       ))}
+      
       </div>
     </div>
   );
