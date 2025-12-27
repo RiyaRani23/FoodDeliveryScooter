@@ -25,15 +25,16 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 60px;
     padding: 20px;
     justify-content: center;
 }
 
 .res-card{
-    width: 350px;
+    width: 300px;
     padding: 5px;
     border-radius: 10px;
+    margin: 20px ;
 }
 
 .res-card:hover {
@@ -59,9 +60,10 @@
 .shimmer-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
     padding: 20px;
     justify-content: center;
+
 }
 
 .shimmer-card{
@@ -69,4 +71,5 @@
     padding: 5px;
     background-color: #e0e0e0;
     border-radius: 8px;
+    height: 250px;
 }
