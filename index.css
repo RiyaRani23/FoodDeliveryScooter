@@ -43,10 +43,10 @@
 }
 
 
-/* .search{
+.search{
     border:solid 1px black;
-    padding:10px;
-} */
+    margin: 10px;
+} 
 
 .res-logoFood{
     width: 100%;
@@ -76,5 +76,9 @@
 
 .login {
     cursor: pointer;
-    
+
+}
+
+.filter{
+    display: flex;
 }
