@@ -1,8 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import {useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Shimmer from "./Shimmer";
 
 const Body =() => {
+    
     // local state variable - super powerful
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [filteredList, setFilteredRestaurant] = useState([]);
@@ -66,11 +68,17 @@ const Body =() => {
     </button>
     </div>
      <div className="res-container">
-        {filteredList.map((restaurant) => (
-        <RestaurantCard key={restaurant.info.id} resData={restaurant}
-  />
-      ))}
-      
+        {filteredList.map((restaurant) => {
+           const { id } = restaurant.info;
+           return (
+            <RestaurantCard
+             key={id}
+             resData={restaurant}
+             onClick={() => navigate(`/restaurants/${id}`)}
+             />
+
+           );
+        })}
       </div>
     </div>
   );

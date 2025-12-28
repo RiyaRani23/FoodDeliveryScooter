@@ -1,65 +1,55 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
+import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
-    // const [resInfo , setResInfo] = useState(null);
+  const { resId } = useParams();
+  const { resInfo, resMenu } = useRestaurantMenu(resId);
+  const [openIndex, setOpenIndex] = useState(0);
 
-    // useEffect(() => {
-    //   fetchMenu();
-    // } , []);
+  if (!resInfo) return <Shimmer />;
 
-    // const fetchMenu = async () => {
-    //     const data = await fetch (
-    //       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.3492917&lng=85.33476499999999&restaurantId=81230&catalog_qa=undefined&submitAction=ENTER"
-    //     );
-    //     const json = await data.json();
+  const {
+    name,
+    cuisines,
+    costForTwoMessage,
+    avgRating,
+    sla,
+    areaName,
+  } = resInfo;
 
-    //     console.log(json);
-    //     setResInfo(json.data);
-    // };
+  return (
+    <div className="menu">
+      <h1>{name}</h1>
 
-    // if (resInfo === null) return <Shimmer/>;
+      <p>
+        {cuisines?.join(", ")} • {costForTwoMessage}
+      </p>
 
-    // const { name, cuisines, costForTwoMessage } = 
-    //   resInfo?.card?.card?.info;
+      <p>
+        ⭐ {avgRating} • {sla?.slaString} • {areaName}
+      </p>
 
-    
+      <h2>Menu</h2>
 
+      {resMenu?.map((category, index) => (
+        <div key={category.categoryId}>
+          <h3>{category.title}</h3>
 
-    // return (
-    //     <div className="menu">
-    //         <h1>{name}</h1>
-    //         <p>
-    //             {cuisines.join(",")} - {costForTwoMessage}
-    //         </p>
-    //         <h2>Menu</h2>
-    //         <ul>
-    //             {itemCards.map((item) => (
-    //                 <li>
-    //                     {item.card.info.name} -{"Rs."}
-    //                     {item.card.info.price/100 || item.card.info.defaultPrice/100 }
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     </div>
-    // );
-
-    useEffect(() => {
-       fetchMenu();
-     } , []);
-
-     const fetchMenu = async () => {
-        const data = await fetch (
-          "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.3492917&lng=85.33476499999999&restaurantId=81230&catalog_qa=undefined&submitAction=ENTER"
-        );
-        const json = await data.json();
-
-        console.log(json);
-     };
-    
-   return (<div>
-        <h1>KFC</h1>
-    </div>);
+          <ul>
+            {category.itemCards?.map((item) => (
+              <li key={item.card.info.id}>
+                {item.card.info.name} - ₹
+                {(item.card.info.price ||
+                  item.card.info.defaultPrice) / 100}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default RestaurantMenu;
