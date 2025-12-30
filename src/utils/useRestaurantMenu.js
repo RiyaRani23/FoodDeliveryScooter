@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import swiggyAPI from "./swiggy.json";
+import swiggyData from "./swiggyData.json";
 
 const useRestaurantMenu = (resId) => {
   const [resInfo, setResInfo] = useState(null);
@@ -8,7 +8,7 @@ const useRestaurantMenu = (resId) => {
   useEffect(() => {
     // 1️⃣ Get Restaurant Info
     const restaurantInfo =
-      swiggyAPI?.data?.cards
+      swiggyData?.data?.cards
         ?.find(
           (item) =>
             item?.card?.card?.["@type"]?.includes(
@@ -19,7 +19,7 @@ const useRestaurantMenu = (resId) => {
 
     // 2️⃣ Get Menu Categories
     const menuData =
-      swiggyAPI?.data?.cards
+      swiggyData?.data?.cards
         ?.find((obj) => obj?.groupedCard)
         ?.groupedCard?.cardGroupMap?.REGULAR?.cards
         ?.filter(

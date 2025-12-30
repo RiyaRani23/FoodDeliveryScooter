@@ -11,7 +11,6 @@ const RestaurantMenu = () => {
   if (!resInfo) return <Shimmer />;
 
   const {
-    name,
     cuisines,
     costForTwoMessage,
     avgRating,
@@ -21,8 +20,6 @@ const RestaurantMenu = () => {
 
   return (
     <div className="menu">
-      <h1>{name}</h1>
-
       <p>
         {cuisines?.join(", ")} • {costForTwoMessage}
       </p>

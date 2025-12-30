@@ -2,9 +2,10 @@ import RestaurantCard from "./RestaurantCard";
 import {useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body =() => {
-    
+    const navigate = useNavigate();
     // local state variable - super powerful
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [filteredList, setFilteredRestaurant] = useState([]);
@@ -67,19 +68,20 @@ const Body =() => {
         Top Rated Restaurants
     </button>
     </div>
-     <div className="res-container">
-        {filteredList.map((restaurant) => {
+       <div className="res-container">
+          {filteredList.map((restaurant) => {
            const { id } = restaurant.info;
            return (
-            <RestaurantCard
-             key={id}
-             resData={restaurant}
-             onClick={() => navigate(`/restaurants/${id}`)}
-             />
-
-           );
-        })}
-      </div>
+            <Link 
+            key={id} 
+            to={"/restaurants/" + id} 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+           >
+            <RestaurantCard resData={restaurant} />
+      </Link>
+    );
+  })}
+</div>
     </div>
   );
 };
