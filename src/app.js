@@ -45,11 +45,11 @@ const appRouter = createBrowserRouter([
         element: <RestaurantMenu />,
       },
       {
-        path: "/Grocery",
+        path: "/grocery",
         element:
-         (<Suspense> fallback={<h1>Loading</h1>}
+         <Suspense fallback={<h1>Loading</h1>}>
           <Grocery/>
-          </Suspense>),
+          </Suspense>,
       },
     ],
     errorElement:<Error/>
