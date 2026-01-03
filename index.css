@@ -88,7 +88,7 @@
     border: 1px solid black;
 }
 
-/* Container styling */
+/* Contact CSS */
 .contact-container {
     background-color: #e0e0e0;
     min-height: 90vh;
@@ -200,5 +200,297 @@ button:active {
 
 input:focus {
   box-shadow: inset 4px 4px 10px #bebebe, inset -4px -4px 10px #ffffff, 0 0 10px rgba(252, 128, 25, 0.2) !important;
+}
+
+/* About section */
+/* General About Page Layout */
+.about-page {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e0e0e0; /* Matches your neumorphic theme */
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex; /* Use flexbox for overall layout */
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    gap: 40px; /* Space between sections */
+}
+
+.about-header h1 {
+    font-size: 44px;
+    color: #282c3f;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.about-header p {
+    font-size: 18px;
+    color: #686b78;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Reusable Neumorphic Cards */
+.neumorphic-card {
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 20px auto; /* Centered with vertical margin */
+    max-width: 800px;
+    text-align: left; /* Align text inside sections */
+}
+
+.neumorphic-inset { /* For service boxes */
+    background: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: left;
+}
+
+
+/* Image Containers */
+.hero-image-container {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Covers the area, crops if needed */
+    display: block; /* Removes extra space below image */
+}
+
+.image-inline-container {
+    margin-top: 30px;
+    text-align: center; /* Center image if it's smaller than container */
+}
+
+.section-image {
+    width: 100%;
+    max-width: 500px; /* Control max width of inline images */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.app-screenshot {
+    max-width: 300px; /* Make app screenshot smaller */
+}
+
+
+/* About Sections */
+.about-section h2 {
+    color: #282c3f;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center; /* Center heading within the section */
+}
+
+.about-section p {
+    color: #686b78;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-section ul li {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.about-section ul li span { /* For emojis */
+    font-size: 20px;
+}
+
+
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    max-width: 900px; /* Limit width */
+    width: 100%;
+}
+
+.stat-card { /* Inherits neumorphic-card styles, overrides specific */
+    padding: 20px 40px;
+    min-width: 150px;
+    flex-basis: 200px; /* Allow cards to grow, but minimum width */
+    flex-grow: 1; /* Allow cards to grow */
+}
+.stat-card h2 {
+    color: #fc8019; /* Swiggy Orange */
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: 700;
+}
+.stat-card p {
+    font-size: 16px;
+    color: #686b78;
+    margin: 0;
+}
+
+/* Services Section */
+.services-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+}
+
+.service-box { /* Inherits neumorphic-inset styles */
+    width: 300px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: left;
+}
+.service-box h3 {
+    color: #282c3f;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.service-box p {
+    font-size: 15px;
+    color: #686b78;
+    line-height: 1.6;
+}
+
+/* Download App Section */
+.download-app-section { /* Inherits neumorphic-card styles */
+    max-width: 600px;
+    padding: 50px;
+    text-align: center;
+}
+.download-app-section h2 {
+    font-size: 32px;
+    color: #282c3f;
+    margin-bottom: 20px;
+}
+.download-app-section p {
+    font-size: 18px;
+    color: #686b78;
+    margin-bottom: 30px;
+}
+.download-button {
+    background: #282c3f; /* Dark button for contrast */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff; /* Neumorphic effect for button */
+}
+.download-button:hover {
+    background: #fc8019; /* Orange on hover */
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+/* Developer Section Title */
+.team-title {
+    margin-top: 60px;
+    font-size: 32px;
+    color: #282c3f;
+    font-weight: 700;
+}
+
+/* User Card (from previous step, ensure these are still present) */
+.user-card {
+    margin: 40px auto;
+    width: 350px;
+    padding: 30px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-10px);
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 5px 5px 15px #bebebe;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    color: #fc8019; /* Swiggy Orange */
+    margin-bottom: 5px;
+}
+
+.user-bio {
+    font-size: 14px;
+    color: #686b78;
+    margin-bottom: 15px;
+}
+
+.stat-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 5px;
+    background: #282c3f;
+    color: white;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 32px;
+    }
+    .about-header p {
+        font-size: 16px;
+    }
+    .neumorphic-card, .neumorphic-inset {
+        padding: 30px 20px;
+        margin: 15px auto;
+    }
+    .stats-container, .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stat-card, .service-box {
+        width: 100%;
+        max-width: 350px;
+        flex-basis: auto;
+    }
+    .hero-image {
+        height: 250px;
+    }
+    .download-app-section {
+        padding: 30px;
+    }
+    .download-app-section h2 {
+        font-size: 24px;
+    }
 }
 
