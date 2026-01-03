@@ -3,12 +3,9 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Error from "./components/Error1.js";
-// import About from "./components/About";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu.js";
-
 import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
-import Grocery from "./components/Grocery.js";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -34,7 +31,10 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />
+         element:
+         <Suspense fallback={<h1>Loading</h1>}>
+          <About/>
+          </Suspense>,
       },
       {
        path: "/contact",
