@@ -2,14 +2,15 @@ import UserClass from "./UserClass";
 
 const About = () => {
     return (
-        <div className="about-page">
-            <div className="about-header">
-                <h1>Welcome to Food Delivery Scooter</h1>
-                <p>Bringing your favorite meals and daily essentials to your doorstep.</p>
+        <div className="bg-gray-50 min-h-screen pb-12">
+            <div className="bg-green-600 text-white py-16 px-6 text-center shadow-lg">
+                <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Welcome to Food Delivery Scooter</h1>
+                <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">Bringing your favorite meals and daily essentials to your doorstep.</p>
             </div>
 
-            <div className="hero-image-container">
+            <div className="max-w-6xl mx-auto -mt-10 px-4">
                 <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2021-09/Food%20delivery%20image.jpg" alt="Food Delivery" className="hero-image" />       
+                className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-2xl border-4 border-white"
             </div>
 
             <div className="about-section neumorphic-card">
