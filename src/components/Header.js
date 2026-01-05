@@ -9,7 +9,7 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     return(
-        <div className="flex justify-between items-center bg-orange-400 shadow-md sticky top-0 z-50 px-8 py-2">
+        <div className="flex justify-between items-center bg-gray-50 shadow-md sticky top-0 z-50 px-8 py-2">
             <div className="flex items-center">
                   <img className="w-24 transition-transform hover:scale-125" 
                   src={LOGO_URL} alt = "Logo" />

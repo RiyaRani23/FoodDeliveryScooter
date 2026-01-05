@@ -1,14 +1,15 @@
 const Shimmer = () => {
+    const style = "m-2 p-4 w-full max-w-[340px] rounded-[2rem] bg-white shadow-xl border border-gray-100";
     return (
-        <div className ="shimmer-container">
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
-            <div className ="shimmer-card"></div>
+        <div className ="flex flex-wrap justify-center gap-12 px-8 mt-8">
+            <div className = {style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
+            <div className ={style}></div>
         </div>
     );
 };
