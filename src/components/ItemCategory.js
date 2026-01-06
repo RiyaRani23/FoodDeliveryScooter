@@ -36,7 +36,9 @@ const ItemCategory = ({ items }) => {
                 No Image
               </div>
             )}
-            <button className="absolute -bottom-2 bg-white text-green-600 font-extrabold px-8 py-2 rounded-lg border border-gray-200 shadow-md hover:shadow-lg hover:bg-gray-50 transition-all active:scale-90 uppercase text-xs tracking-wide">
+            <button className="absolute -bottom-2 bg-white text-green-500 font-extrabold 
+            px-8 py-2 rounded-lg border border-gray-200 shadow-md hover:shadow-lg hover:bg-green-400
+             hover:text-white transition-all active:scale-90 uppercase text-xs tracking-wide">
               Add
             </button>
           </div>
