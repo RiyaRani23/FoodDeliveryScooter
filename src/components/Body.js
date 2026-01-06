@@ -9,7 +9,7 @@ const Body =() => {
     const navigate = useNavigate();
     // local state variable - super powerful
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
-    const [filteredList, setFilteredRestaurant] = useState([]);
+    const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
     const [searchText , setSearchText] = useState("");
     const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
@@ -92,14 +92,14 @@ const Body =() => {
        const filteredList = listOfRestaurants.filter(
         (res) => res.info.avgRating > 4.0
        );
-       setListOfRestaurants(filteredList);
+       setFilteredRestaurant(filteredList);
       }}
       >
         ⭐ Top Rated Restaurants
     </button>
     </div>
        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          {filteredList.map((restaurant) => {
+          {filteredRestaurant.map((restaurant) => {
            const { id } = restaurant.info;
            return (
             <Link 

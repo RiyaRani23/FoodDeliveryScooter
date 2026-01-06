@@ -15,7 +15,6 @@ const RestaurantMenu = () => {
     costForTwoMessage,
     avgRating,
     sla,
-    areaName,
   } = resInfo;
 
   return (
