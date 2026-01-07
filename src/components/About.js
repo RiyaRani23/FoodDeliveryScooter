@@ -89,6 +89,7 @@ const About = () => {
                                 <span className="text-gray-600 md:ml-1 leading-snug">{item.desc}</span>
                             </div>
                         </li>
+                        
                     ))}
                 </ul>
             </div>
