@@ -20,7 +20,7 @@ const AppLayout = () =>{
 
   useEffect(() => {
     const data = {
-      name: "Riya Rani", 
+      name: "User", 
     };
     setUserName(data.name);
   }, []);
