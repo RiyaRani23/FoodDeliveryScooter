@@ -10,3 +10,13 @@ test("Should load contact us component", () => {
     expect(heading).toBeInTheDocument();
 
 });
+
+test("Should load button inside Contact component", () => {
+    render(<Contact />);
+
+    // const button = screen.getByRole("button");
+     const button = screen.getByText("Send Message");
+
+    expect(button).toBeInTheDocument();
+
+});
