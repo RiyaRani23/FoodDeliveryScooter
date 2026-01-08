@@ -20,3 +20,23 @@ test("Should load button inside Contact component", () => {
     expect(button).toBeInTheDocument();
 
 });
+
+test("Should load input name inside Contact component", () => {
+    render(<Contact />);
+
+    // const button = screen.getByRole("button");
+     const inputName = screen.getByPlaceholderText("Name");
+
+    expect(inputName).toBeInTheDocument();
+
+});
+
+test("Should load 2 input boxes on the Contact component", () => {
+    render(<Contact />);
+
+    // const button = screen.getByRole("button");
+     const inputName = screen.getByPlaceholderText("Name");
+
+    expect(inputName).toBeInTheDocument();
+
+});
