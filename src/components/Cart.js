@@ -39,7 +39,7 @@ const Cart = () => {
               className="w-64 mx-auto mb-6"
             />
             <h2 className="text-2xl font-bold text-gray-700 italic">"Your scooter is empty!"</h2>
-            <p className="text-gray-400 mt-2 mb-8">Fuel up with some delicious food from KFC and more.</p>
+            <p className="text-gray-400 mt-2 mb-8">Fuel up with some delicious food from different Restaurant.</p>
             <Link to="/">
               <button className="bg-[#00c853] text-white px-10 py-3 rounded-xl font-bold hover:scale-105 transition shadow-lg shadow-green-200">
                 START ORDERING
