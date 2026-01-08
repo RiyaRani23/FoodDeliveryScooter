@@ -35,8 +35,9 @@ test("Should load 2 input boxes on the Contact component", () => {
     render(<Contact />);
 
     // const button = screen.getByRole("button");
-     const inputName = screen.getByPlaceholderText("Name");
+     const inputBoxes = screen.getAllByRole("textbox"); // for multiple use getAllByRole
 
-    expect(inputName).toBeInTheDocument();
+    expect(inputBoxes).toHaveLength(3);
+
 
 });
