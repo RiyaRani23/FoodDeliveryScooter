@@ -83,7 +83,6 @@ const appRouter = createBrowserRouter([
        element: <Cart />,
     }
     ],
-    
     errorElement:<Error/>
   }, 
 ])
