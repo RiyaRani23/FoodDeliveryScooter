@@ -1,4 +1,4 @@
-import ItemCategory from "./ItemCategory";
+import ItemCategory from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {

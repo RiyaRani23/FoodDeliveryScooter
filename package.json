@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/RiyaRani23/FoodDeliveryScooter#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "@tailwindcss/postcss": "^4.1.18",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0",
     "react-router": "^6.14.2",
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^6.30.3"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
