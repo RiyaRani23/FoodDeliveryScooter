@@ -1,11 +1,12 @@
 {
   "name": "fooddeliveryscooter",
   "version": "1.0.0",
-  "description": "This is food app",
+  "description": "This is food delivery website",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "repository": {
     "type": "git",
