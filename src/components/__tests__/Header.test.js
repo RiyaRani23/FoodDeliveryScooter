@@ -1,4 +1,4 @@
-import { render, screen, fireEvent} from "@testing-library/react";
+import { render, screen} from "@testing-library/react";
 import Header from "../Header";
 import appStore from "../../utils/appStore";
 import { Provider } from "react-redux";

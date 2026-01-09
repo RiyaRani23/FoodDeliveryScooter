@@ -1,0 +1,69 @@
+{
+"info": {
+"id": "80227",
+"name": "Pizza Hut",
+"cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/40c01fd2-6e9e-4eda-846e-cbd2a9361b91_80227.JPG",
+"locality": "Hinoo",
+"areaName": "Hinoo",
+"costForTwo": "₹350 for two",
+"cuisines": [
+"Pizzas"
+],
+"avgRating": 4.3,
+"parentId": "721",
+"avgRatingString": "4.3",
+"totalRatingsString": "9.2K+",
+"sla": {
+"deliveryTime": 25,
+"lastMileTravel": 2.1,
+"serviceability": "SERVICEABLE",
+"slaString": "20-25 mins",
+"lastMileTravelString": "2.1 km",
+"iconType": "ICON_TYPE_EMPTY"
+},
+"availability": {
+"nextCloseTime": "2026-01-10 03:00:00",
+"opened": true
+},
+"badges": {},
+"isOpen": true,
+"type": "F",
+"badgesV2": {
+"entityBadges": {
+"imageBased": {},
+"textBased": {},
+"textExtendedBadges": {}
+}
+},
+"aggregatedDiscountInfoV3": {
+"header": "ITEMS",
+"subHeader": "AT ₹59"
+},
+"differentiatedUi": {
+"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+"differentiatedUiMediaDetails": {
+"lottie": {},
+"video": {}
+}
+},
+"reviewsSummary": {},
+"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+"restaurantOfferPresentationInfo": {},
+"externalRatings": {
+"aggregatedRating": {
+"rating": "4.1",
+"ratingCount": "1.5K+"
+},
+"source": "GOOGLE",
+"sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+},
+"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+},
+"analytics": {
+"context": "seo-data-7f16ad23-f575-4555-bef4-f2e23f38b663"
+},
+"cta": {
+"link": "https://www.swiggy.com/city/ranchi/pizza-hut-hinoo-rest80227",
+"type": "WEBLINK"
+}
+}
