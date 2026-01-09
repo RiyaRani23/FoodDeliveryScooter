@@ -1,5 +1,14 @@
 # 🛵 Food Delivery Scooter
 
+![React](https://img.shields.io/badge/React-18-blue)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-purple)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
+![Parcel](https://img.shields.io/badge/Parcel-Bundler-orange)
+![Jest](https://img.shields.io/badge/Testing-Jest-red)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Food Delivery Scooter is a modern React-based food delivery & quick-commerce web application inspired by real-world platforms like Swiggy and Instamart.
 It allows users to browse restaurants, search food items, manage a cart, and experience fast grocery-style ordering with a smooth UI.
 
