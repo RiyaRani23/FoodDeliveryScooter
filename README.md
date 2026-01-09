@@ -9,6 +9,9 @@
 ![Vercel](https://img.shields.io/badge/Deployed-Vercel-black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://fooddeliveryscooter.vercel.app/)
+
+
 Food Delivery Scooter is a modern React-based food delivery & quick-commerce web application inspired by real-world platforms like Swiggy and Instamart.
 It allows users to browse restaurants, search food items, manage a cart, and experience fast grocery-style ordering with a smooth UI.
 
@@ -134,8 +137,9 @@ npm start
 
 App will run at:
 
-[Live Server](http://localhost:1234)
-
+'''bash
+(http://localhost:1234)
+```
 
 **🧪 Testing**
 
