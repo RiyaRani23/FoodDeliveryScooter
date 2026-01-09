@@ -138,7 +138,7 @@ npm start
 App will run at:
 
 ```bash
-(http://localhost:1234)
+http://localhost:1234
 ```
 
 **🧪 Testing**
