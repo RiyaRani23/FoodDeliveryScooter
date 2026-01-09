@@ -33,7 +33,7 @@ const Header = () => {
             <div className="flex items-center">
                 <ul className="flex items-center gap-6 font-medium text-gray-700">
                     <li className="text-sm">
-                        Online Status: { onlineStatus ? "✅" : "❌" }
+                        Online Status: { onlineStatus ? "✅ye" : "❌" }
                     </li>
                     <li className="hover:text-green-600 transition-colors font-bold">
                         <Link to="/">Home</Link>
