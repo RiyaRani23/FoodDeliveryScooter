@@ -1,17 +1,174 @@
-# FoodDeliveryScooter
+# 🛵 Food Delivery Scooter
 
- 
-`Heading`
-  - logo
-  - Nav Items
-`Body`
-  - search
-  - restaurant list
-    - Restaurant Card
-      - image
-        - name of restaurant,Star Rating,Cuisine,Delivery time
-`Footer`
-  -Copyright
-  - links   
-  - address
-  - contact
+`Food Delivery Scooter is a modern React-based food delivery & quick-commerce web application inspired by real-world platforms like Swiggy and Instamart.`
+It allows users to browse restaurants, search food items, manage a cart, and experience fast grocery-style ordering with a smooth UI.
+
+**🧠 Project Overview**
+
+This project is built to strengthen core React fundamentals by implementing real-world features such as API data fetching, routing, state management with Redux Toolkit, reusable components, and unit testing.
+
+- The focus is on clean architecture, scalability, and performance.
+
+**✨ Key Features**
+
+- 🍽️ Live restaurant & menu data (API-based)
+
+- 🔍 Search & filter restaurants and food items
+
+- 🛒 Add / remove items from cart with quantity control
+
+- 🏪 Instamart-style grocery section
+
+- ♻️ Reusable and modular components
+
+- ⚡ Shimmer UI for loading states
+
+- 📱 Fully responsive design
+
+- 🧪 Unit testing with Jest & React Testing Library
+
+`⚛️ React & JS Concepts Used`
+
+`Functional Components`
+
+`JSX`
+
+`Props & State`
+
+`React Hooks (useState, useEffect)`
+
+`Custom Hooks (useOnlineStatus, useRestaurantMenu)`
+
+`React Router (dynamic routing)`
+
+`Context API`
+
+`Redux Toolkit (global cart state)`
+
+`Conditional Rendering`
+
+`Code Splitting & Performance Optimization`
+
+**🛠️ Tech Stack**
+
+- ⚛️ React.js
+
+- 🧠 JavaScript (ES6+)
+
+- 🎨 Tailwind CSS
+
+- 🛒 Redux Toolkit
+
+- 📦 Parcel Bundler
+
+- 🧪 Jest & React Testing Library
+
+- 🚀 Vercel (Deployment)
+
+## 🏗️ Project Structure
+FoodDeliveryScooter/
+├── src/
+│   ├── components/
+│   │   ├── __tests__/           # Unit tests
+│   │   ├── mocks/               # Mock JSON data
+│   │   ├── About.js
+│   │   ├── Body.js
+│   │   ├── Cart.js
+│   │   ├── Contact.js
+│   │   ├── Grocery.js
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── RestaurantCard.js
+│   │   ├── RestaurantMenu.js
+│   │   ├── RestaurantCategory.js
+│   │   ├── Shimmer.js
+│   │   ├── User.js
+│   │   └── UserClass.js
+│   ├── utils/
+│   │   ├── appStore.js
+│   │   ├── cartSlice.js
+│   │   ├── constant.js
+│   │   ├── mockData.js
+│   │   ├── swiggyData.json
+│   │   ├── useOnlineStatus.js
+│   │   ├── useRestaurantMenu.js
+│   │   └── UserContext.js
+│   ├── app.js
+│   ├── index.css
+│   └── index.html
+├── babel.config.js
+├── jest.config.js
+├── parcelrc
+├── package.json
+├── package-lock.json
+└── README.md
+
+**🌍 Live Demo**
+
+🔗 Deployed on Vercel
+
+`👉 https://fooddeliveryscooter.vercel.app/`
+
+**🚀 Installation & Setup**
+
+1️⃣ Clone the Repository
+
+```js
+git clone https://github.com/RiyaRani23/FoodDeliveryScooter.git
+cd FoodDeliveryScooter
+```
+
+2️⃣ Install Dependencies
+```js
+npm install
+```
+
+3️⃣ Run Development Server
+```js
+npm start
+```
+
+App will run at:
+```js
+http://localhost:1234
+```
+
+**🧪 Testing**
+
+`Unit tests are written using Jest and React Testing Library.`
+```js
+npm test
+```
+
+**📌 Future Enhancements**
+
+- User authentication
+
+- Payment & checkout flow
+
+- Backend integration
+
+- Order history
+
+- Improved test coverage
+
+**🤝 Contributing**
+
+Contributions are welcome!
+Fork the repository
+Create a new branch
+Commit your changes
+Push and open a Pull Request
+
+**📄 License**
+
+`This project is licensed under the MIT License.`
+
+**🙌 Acknowledgements**
+
+`React Community`
+`Redux Toolkit`
+`Tailwind CSS`
+`Open-source contributors`
+
+`⭐ Built with ❤️ using React — Food Delivery Scooter`
