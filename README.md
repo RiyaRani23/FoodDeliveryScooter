@@ -1,6 +1,6 @@
 # 🛵 Food Delivery Scooter
 
-`Food Delivery Scooter is a modern React-based food delivery & quick-commerce web application inspired by real-world platforms like Swiggy and Instamart.`
+Food Delivery Scooter is a modern React-based food delivery & quick-commerce web application inspired by real-world platforms like Swiggy and Instamart.
 It allows users to browse restaurants, search food items, manage a cart, and experience fast grocery-style ordering with a smooth UI.
 
 **🧠 Project Overview**
@@ -27,27 +27,18 @@ This project is built to strengthen core React fundamentals by implementing real
 
 - 🧪 Unit testing with Jest & React Testing Library
 
-`⚛️ React & JS Concepts Used`
+## ⚛️ React & JS Concepts Used
 
-`Functional Components`
-
-`JSX`
-
-`Props & State`
-
-`React Hooks (useState, useEffect)`
-
-`Custom Hooks (useOnlineStatus, useRestaurantMenu)`
-
-`React Router (dynamic routing)`
-
-`Context API`
-
-`Redux Toolkit (global cart state)`
-
-`Conditional Rendering`
-
-`Code Splitting & Performance Optimization`
+- Functional Components
+- JSX
+- Props & State
+- React Hooks (useState, useEffect)
+- Custom Hooks (useOnlineStatus, useRestaurantMenu)
+- React Router (dynamic routing)
+- Context API
+- Redux Toolkit (global cart state)
+- Conditional Rendering
+- Code Splitting & Performance Optimization
 
 **🛠️ Tech Stack**
 
@@ -66,6 +57,8 @@ This project is built to strengthen core React fundamentals by implementing real
 - 🚀 Vercel (Deployment)
 
 ## 🏗️ Project Structure
+
+```text
 FoodDeliveryScooter/
 ├── src/
 │   ├── components/
@@ -98,45 +91,47 @@ FoodDeliveryScooter/
 │   └── index.html
 ├── babel.config.js
 ├── jest.config.js
-├── parcelrc
+├── .parcelrc
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
 **🌍 Live Demo**
 
 🔗 Deployed on Vercel
 
-`👉 https://fooddeliveryscooter.vercel.app/`
+🔗 [Live Demo](https://fooddeliveryscooter.vercel.app/)
+
 
 **🚀 Installation & Setup**
 
 1️⃣ Clone the Repository
 
-```js
+```bash
 git clone https://github.com/RiyaRani23/FoodDeliveryScooter.git
 cd FoodDeliveryScooter
 ```
 
 2️⃣ Install Dependencies
-```js
+```bash
 npm install
 ```
 
 3️⃣ Run Development Server
-```js
+```bash
 npm start
 ```
 
 App will run at:
-```js
-http://localhost:1234
-```
+
+[Live Server](http://localhost:1234)
+
 
 **🧪 Testing**
 
 `Unit tests are written using Jest and React Testing Library.`
-```js
+```bash
 npm test
 ```
 
@@ -152,23 +147,26 @@ npm test
 
 - Improved test coverage
 
-**🤝 Contributing**
+## 🤝 Contributing
 
 Contributions are welcome!
-Fork the repository
-Create a new branch
-Commit your changes
-Push and open a Pull Request
+
+1. Fork the repository  
+2. Create a new branch  
+3. Commit your changes  
+4. Push and open a Pull Request  
+
 
 **📄 License**
 
 `This project is licensed under the MIT License.`
 
-**🙌 Acknowledgements**
+## 🙌 Acknowledgements
 
-`React Community`
-`Redux Toolkit`
-`Tailwind CSS`
-`Open-source contributors`
+- React Community
+- Redux Toolkit
+- Tailwind CSS
+- Open-source contributors
+
 
 `⭐ Built with ❤️ using React — Food Delivery Scooter`
