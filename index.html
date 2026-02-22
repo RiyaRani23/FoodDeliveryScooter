@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="root"> rendered</div>
+   <div id="root">
+  <div class="flex flex-col items-center justify-center h-screen bg-gray-50">
+    <div class="relative flex h-20 w-20">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-20 w-20 bg-orange-500 items-center justify-center">
+        <span class="text-3xl">🍔</span>
+      </span>
+    </div>
+    
+    <h1 class="mt-8 text-xl font-bold text-gray-800 animate-pulse">
+      Finding the best food for you...
+    </h1>
+    <p class="mt-2 text-gray-500 text-sm">Please wait while we connect to the kitchen</p>
+  </div>
+</div>
     <script type="module" src="./src/app.js"></script>
 </body>
 </html>
