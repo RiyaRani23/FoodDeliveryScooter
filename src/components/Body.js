@@ -31,6 +31,8 @@ const Body =() => {
 
     const json = await response.json();
 
+    console.log("Full API Response:", json);
+
     const cards = json?.data?.cards;
     if (!cards || !Array.isArray(cards)) {
       console.error("❌ Unexpected JSON structure", json);
