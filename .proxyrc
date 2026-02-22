@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "https://www.swiggy.com/dapi",
+    "pathRewrite": {
+      "^/api/proxy": "/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    },
+    "changeOrigin": true
+  }
+}
