@@ -20,7 +20,7 @@ const Body =() => {
 
    const fetchData = async () => {
   try {
-   const response = await fetch("/api/swiggy");
+   const response = await fetch("/api/proxy");
 
     if (!response.ok) {
       console.error("❌ API Error:", response.status);
