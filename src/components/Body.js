@@ -20,9 +20,7 @@ const Body =() => {
 
    const fetchData = async () => {
   try {
-    const response = await fetch(
-  "https://api.allorigins.win/raw?url=" + encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.34410&lng=85.30950")
-);
+   const response = await fetch("/api/swiggy");
 
     if (!response.ok) {
       console.error("❌ API Error:", response.status);
