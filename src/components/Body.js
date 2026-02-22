@@ -20,31 +20,54 @@ const Body =() => {
 
    const fetchData = async () => {
   try {
-    const data = await fetch("https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.34410&lng=85.30950&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-    const json = await data.json();
-
-    // Strategy: Filter all cards that have restaurants and flatten them into one big list
-    const allCardsWithRestaurants = json?.data?.cards?.filter(
-      (c) => c?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    const response = await fetch(
+      "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.34410&lng=85.30950&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
-    // This extracts restaurants from ALL available cards and combines them
+    if (!response.ok) {
+      console.error("❌ API Error:", response.status);
+      setListOfRestaurants([]);
+      setFilteredRestaurant([]);
+      return;
+    }
+
+    const json = await response.json();
+
+    const cards = json?.data?.cards;
+    if (!cards || !Array.isArray(cards)) {
+      console.error("❌ Unexpected JSON structure", json);
+      setListOfRestaurants([]);
+      setFilteredRestaurant([]);
+      return;
+    }
+
+    const allCardsWithRestaurants = cards.filter(
+      (c) =>
+        c?.card?.card?.gridElements?.infoWithStyle?.restaurants &&
+        Array.isArray(
+          c.card.card.gridElements.infoWithStyle.restaurants
+        )
+    );
+
     let combinedList = [];
+
     allCardsWithRestaurants.forEach((card) => {
-      const resList = card?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      const resList =
+        card.card.card.gridElements.infoWithStyle
+          .restaurants;
       combinedList = [...combinedList, ...resList];
     });
 
-    // Remove duplicates (sometimes Top Brands and Main Grid overlap)
     const uniqueRestaurants = Array.from(
-      new Map(combinedList.map((item) => [item.info.id, item])).values()
+      new Map(combinedList.map((r) => [r.info.id, r])).values()
     );
 
     setListOfRestaurants(uniqueRestaurants);
     setFilteredRestaurant(uniqueRestaurants);
-    
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("❌ Fetch failed:", error);
+    setListOfRestaurants([]);
+    setFilteredRestaurant([]);
   }
 };
     const onlineStatus = useOnlineStatus();
