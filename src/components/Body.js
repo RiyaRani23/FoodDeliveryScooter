@@ -21,8 +21,8 @@ const Body =() => {
    const fetchData = async () => {
   try {
     const response = await fetch(
-      "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.34410&lng=85.30950&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+  "https://api.allorigins.win/raw?url=" + encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.34410&lng=85.30950")
+);
 
     if (!response.ok) {
       console.error("❌ API Error:", response.status);
@@ -65,7 +65,6 @@ const Body =() => {
     setListOfRestaurants(uniqueRestaurants);
     setFilteredRestaurant(uniqueRestaurants);
   } catch (error) {
-    console.error("❌ Fetch failed:", error);
     setListOfRestaurants([]);
     setFilteredRestaurant([]);
   }
